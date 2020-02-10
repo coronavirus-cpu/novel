@@ -7,3 +7,9 @@ class GHUserListAPIView(generics.ListCreateAPIView):
     serializer_class = GHUserSerializer
     queryset = GitHubUser.objects.all()
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+
+class GHUserDetailAPIView(generics.RetrieveAPIView):
+    serializer_class = GHUserSerializer
+    queryset = GitHubUser.objects.all()
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
