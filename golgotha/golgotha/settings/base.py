@@ -14,12 +14,9 @@ DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
+    "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django.contrib.sites",
-    "django.contrib.flatpages",
-    "django.contrib.sitemaps",
-    "django.contrib.humanize",
 ]
 REST_FRAMEWORK_APPS = ["rest_framework", "rest_framework.authtoken", "drf_yasg"]
 THIRD_PARTY_APPS = ["django_extensions"]
@@ -77,6 +74,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
+
+# Static files (CSS, JavaScript, Images)
+# ----------------------------------------------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
+STATIC_URL = "/static/"
 
 # REST FRAMEWORK
 # ----------------------------------------------------------------------------------------------------------------------

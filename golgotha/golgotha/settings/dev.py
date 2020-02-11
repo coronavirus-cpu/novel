@@ -1,10 +1,17 @@
+from .base import *  # noqa
+from .base import env
+
+SECRET_KEY = env("SECRET_KEY", default="only dev replace me")
+
+ALLOWED_HOSTS = ["*"]
+
 # REST FRAMEWORK
 # ----------------------------------------------------------------------------------------------------------------------
 # http://www.django-rest-framework.org/api-guide/settings/
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
+    # "DEFAULT_RENDERER_CLASSES": ["rest_framework.renderers.JSONRenderer"],
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework.authentication.TokenAuthentication",
