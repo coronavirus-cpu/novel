@@ -12,7 +12,7 @@ class GhspiderPipeline(object):
         # spider.logger.info(item)
         _headers = {"Authorization": "Token a17fe39bc573227107212bd484346225929aad98"}
         req = requests.post(
-            "http://203.156.197.140/api/gh/", json=item, headers=_headers
+            "http://203.156.197.79/api/gh/", json=item, headers=_headers
         )
         if req.status_code == 201:
             spider.logger.info("post ok")
