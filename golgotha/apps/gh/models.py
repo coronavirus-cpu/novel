@@ -5,6 +5,7 @@ from django.utils import timezone
 class GitHubUser(models.Model):
     login = models.CharField(max_length=255, unique=True)
     name = models.CharField(max_length=255, default="unknown")
+    type = models.CharField(max_length=50)
     followers = models.IntegerField(default=0)
     email = models.EmailField(max_length=255, blank=True, null=True)
     company = models.CharField(max_length=255, blank=True, null=True)
